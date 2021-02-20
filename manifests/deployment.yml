@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: remurarodockerimageangular 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: remurarodockerimageangular
+  template:
+    metadata:
+      labels:
+        app: remurarodockerimageangular 
+    spec:
+      containers:
+        - name: remurarodockerimageangular 
+          image: containerregistryb8it148angular.azurecr.io/remurarodockerimageangular
+          ports:
+          - containerPort: 80
